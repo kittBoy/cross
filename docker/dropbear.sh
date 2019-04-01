@@ -1,7 +1,7 @@
 set -ex
 
 main() {
-    local version=2017.75 \
+    local version=2019.77 \
           td=$(mktemp -d)
 
     local dependencies=(
@@ -24,7 +24,7 @@ main() {
 
     pushd $td
 
-    curl -L https://matt.ucc.asn.au/dropbear/dropbear-$version.tar.bz2 | \
+    curl -L https://matt.ucc.asn.au/dropbear/releases/dropbear-$version.tar.bz2 | \
         tar --strip-components=1 -xj
 
     # Remove some unwanted message
